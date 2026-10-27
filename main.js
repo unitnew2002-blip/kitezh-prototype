@@ -59,6 +59,20 @@
   }, { threshold: .15, rootMargin: '0px 0px -60px 0px' });
   $$('.reveal').forEach(el => io.observe(el));
 
+  // Запасной путь: если наблюдатель не сработал (старый Safari, фоновая вкладка),
+  // показываем всё, что уже попало в экран
+  const fallback = () => {
+    $$('.reveal:not(.is-in)').forEach(el => {
+      if (el.getBoundingClientRect().top < innerHeight) {
+        el.classList.add('is-in');
+        $$('[data-count]', el).forEach(countUp);
+        io.unobserve(el);
+      }
+    });
+  };
+  addEventListener('scroll', fallback, { passive: true });
+  addEventListener('load', () => setTimeout(fallback, 400));
+
   // Параллакс иллюстрации в блоке пожертвований
   const par = $$('[data-parallax]');
   if (!reduce && par.length) {

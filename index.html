@@ -15,14 +15,15 @@
     .hero { padding-top: 140px; }
     .widget__demo { display: none; margin-top: 4px; padding: 12px 14px; border-radius: 12px; background: #f1f3f6; font-size: 13px; text-align: center; }
     .widget__demo.is-shown { display: block; }
-    @media (max-width: 760px) { .hero { padding-top: 124px; } .nav { top: 96px; } .proto-bar { font-size: 11px; } }
+    @media (max-width: 1024px) { .nav { top: 108px; } }
+    @media (max-width: 760px) { .hero { padding-top: 124px; } .nav { top: 96px; } .proto-bar { font-size: 11px; } .pb-long { display: none; } }
   </style>
 </head>
 <body>
 
 <!-- ============ Шапка ============ -->
 <header class="header" id="top">
-  <div class="proto-bar"><b>Прототип редизайна</b> сайта кризисного центра «Китеж» · не официальный сайт</div>
+  <div class="proto-bar"><span><b>Прототип редизайна</b> <span class="pb-long">сайта кризисного центра </span>«Китеж» · не официальный сайт</span></div>
   <div class="container header__inner">
     <a class="logo" href="#top" aria-label="Китеж — на главную"><img src="assets/logo.png" alt="Китеж" width="130" height="52"></a>
     <nav class="nav" aria-label="Основная навигация">
