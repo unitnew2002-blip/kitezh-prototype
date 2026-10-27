@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Прототип сайта «Китеж»</title>
+  <meta name="description" content="Прототип редизайна сайта кризисного центра «Китеж». Не официальный сайт.">
+  <link rel="preload" href="fonts/MedeoSansVariable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    .proto-bar { display: flex; justify-content: center; align-items: center; gap: 8px; height: 28px; padding: 0 16px; background: #1a1a1c; color: #fff; font-size: 12px; letter-spacing: .02em; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .proto-bar b { font-weight: 600; }
+    .header.is-hidden { transform: none; }
+    .hero { padding-top: 140px; }
+    .widget__demo { display: none; margin-top: 4px; padding: 12px 14px; border-radius: 12px; background: #f1f3f6; font-size: 13px; text-align: center; }
+    .widget__demo.is-shown { display: block; }
+    @media (max-width: 760px) { .hero { padding-top: 124px; } .nav { top: 96px; } .proto-bar { font-size: 11px; } }
+  </style>
+</head>
+<body>
+
+<!-- ============ Шапка ============ -->
+<header class="header" id="top">
+  <div class="proto-bar"><b>Прототип редизайна</b> сайта кризисного центра «Китеж» · не официальный сайт</div>
+  <div class="container header__inner">
+    <a class="logo" href="#top" aria-label="Китеж — на главную"><img src="assets/logo.png" alt="Китеж" width="130" height="52"></a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#business">Бизнесу и брендам</a>
+      <a href="#about">О центре</a>
+      <div class="dd">
+        <a class="dd__toggle" href="#help" aria-haspopup="true">Получить помощь <svg class="nav__caret" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="dd__menu" role="menu">
+          <a role="menuitem" href="#help"><span class="tag__ic"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M12 17.6s-3.4-2-3.4-4.3A1.9 1.9 0 0 1 12 12.2a1.9 1.9 0 0 1 3.4 1.1c0 2.3-3.4 4.3-3.4 4.3z"/></svg></span>Убежище</a>
+          <a role="menuitem" href="#help"><span class="tag__ic"><svg viewBox="0 0 24 24"><path d="M2 14l3-6.5L8 14a3 3 0 0 1-6 0zM16 14l3-6.5 3 6.5a3 3 0 0 1-6 0zM12 3v17M8 21h8M5 6.5h14"/></svg></span>Юридическая помощь</a>
+          <a role="menuitem" href="#help"><span class="tag__ic"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.4A8.5 8.5 0 1 1 21 11.5z"/><path d="M12 15.2s-3-1.8-3-3.9A1.6 1.6 0 0 1 12 10.4a1.6 1.6 0 0 1 3 .9c0 2.1-3 3.9-3 3.9z"/></svg></span>Психологическая помощь</a>
+          <a role="menuitem" href="#help"><span class="tag__ic"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 12.5h18"/></svg></span>Работа и жильё</a>
+        </div>
+      </div>
+    </nav>
+    <div class="header__right">
+      <a class="header__phone" href="tel:+79169201030">+7 916 920-10-30</a>
+      <a class="btn btn--dark" href="#donate">Пожертвовать</a>
+    </div>
+    <button class="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ Обложка ============ -->
+<section class="hero" id="help">
+  <div class="hero__bg" aria-hidden="true">
+    <span class="blob blob--1"></span><span class="blob blob--2"></span><span class="blob blob--3"></span><span class="blob blob--4"></span>
+  </div>
+  <img class="hero__hearts" src="assets/hearts.png" alt="" aria-hidden="true" width="296" height="282">
+
+  <div class="container hero__inner">
+    <img class="hero__bird" src="assets/bird.png" alt="" aria-hidden="true" width="360" height="343">
+    <div class="hero__text">
+      <h1 class="hero__title" data-split>Помогаем женщинам и&nbsp;детям, пострадавшим от&nbsp;домашнего насилия</h1>
+      <ul class="tags">
+        <li class="tag"><span class="tag__ic"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9.5A4 4 0 0 1 12 8a4 4 0 0 1 7 2.5C19 15.6 12 20 12 20z"/></svg></span>Безвозмездно</li>
+        <li class="tag"><span class="tag__ic"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M12 17.6s-3.4-2-3.4-4.3A1.9 1.9 0 0 1 12 12.2a1.9 1.9 0 0 1 3.4 1.1c0 2.3-3.4 4.3-3.4 4.3z"/></svg></span>Убежище</li>
+        <li class="tag"><span class="tag__ic"><svg viewBox="0 0 24 24"><path d="M2 14l3-6.5L8 14a3 3 0 0 1-6 0zM16 14l3-6.5 3 6.5a3 3 0 0 1-6 0zM12 3v17M8 21h8M5 6.5h14"/></svg></span>Юридическая помощь</li>
+        <li class="tag"><span class="tag__ic"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.4A8.5 8.5 0 1 1 21 11.5z"/><path d="M12 15.2s-3-1.8-3-3.9A1.6 1.6 0 0 1 12 10.4a1.6 1.6 0 0 1 3 .9c0 2.1-3 3.9-3 3.9z"/></svg></span>Психологическая помощь</li>
+        <li class="tag"><span class="tag__ic"><svg viewBox="0 0 24 24"><path d="M6.5 10.5h11A2.5 2.5 0 0 1 20 13v5.5a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 18.5V13a2.5 2.5 0 0 1 2.5-2.5zM8 10.5v-3a4 4 0 0 1 8 0v3M12 14.5V17"/></svg></span>Конфиденциально</li>
+      </ul>
+      <div class="hero__actions">
+        <a class="btn btn--dark btn--lg" href="#donate">Пожертвовать</a>
+        <a class="btn btn--white btn--lg" href="#business">Обсудить партнёрство</a>
+      </div>
+    </div>
+
+    <aside class="help-card" aria-label="Мне нужна помощь">
+      <h2 class="help-card__title">Мне нужна помощь</h2>
+      <a class="contact" href="tel:+79169201030">
+        <span class="ic-circle"><svg viewBox="0 0 24 24"><path d="M21.5 16.4v2.9a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6A2 2 0 0 1 3.8 2.5h2.9a2 2 0 0 1 2 1.7c.1.9.4 1.9.7 2.8a2 2 0 0 1-.5 2.1L7.7 10.3a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2.1z"/></svg></span>
+        <span><b>+7 916 920-10-30</b><small>Телефон доверия · 9:00–23:00</small></span>
+      </a>
+      <a class="contact" href="mailto:alsadikova@yandex.ru">
+        <span class="ic-circle"><svg viewBox="0 0 24 24"><path d="M4.5 4.5h15a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-11a2 2 0 0 1 2-2zM3 7l7.9 5.3a2 2 0 0 0 2.2 0L21 7"/></svg></span>
+        <span><b>alsadikova@yandex.ru</b><small>Кризисная почта</small></span>
+      </a>
+      <div class="help-card__msg">
+        <span><b>Мессенджеры</b><small>пишите в любой</small></span>
+        <div class="msg-icons">
+          <a class="msg" href="#" aria-label="Telegram" data-tip="Telegram"><img src="assets/icons/tg.svg" alt="" width="24" height="24"></a>
+          <a class="msg" href="https://wa.me/79169201030" aria-label="WhatsApp" data-tip="WhatsApp"><img src="assets/icons/wa.svg" alt="" width="24" height="24"></a>
+          <a class="msg" href="#" aria-label="IMO" data-tip="IMO"><img src="assets/icons/imo.svg" alt="" width="24" height="24"></a>
+          <a class="msg" href="#" aria-label="MAX" data-tip="MAX"><img src="assets/icons/max.svg" alt="" width="24" height="24"></a>
+        </div>
+      </div>
+      <a class="link" href="#faq">Подробнее про нашу помощь <svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ Наша деятельность ============ -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="section__head reveal">
+      <h2 class="h2">Наша деятельность</h2>
+      <a class="link link--muted" href="#">Публичный отчёт 2025 · PDF <svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+    </div>
+    <div class="stats">
+      <article class="stat stat--shelter reveal" style="--d:0">
+        <p class="status">Свободные места в убежище сейчас</p>
+        <div class="places">
+          <div><b class="stat__num" data-count="12">12</b><span>для женщин</span></div>
+          <div><b class="stat__num" data-count="5">5</b><span>для детей</span></div>
+        </div>
+        <img class="stat__house" src="assets/house.png" alt="" width="186" height="178">
+      </article>
+      <article class="stat reveal" style="--d:1">
+        <img class="stat__ic" src="assets/calendar.png" alt="" width="58" height="55">
+        <div><b class="stat__num" data-count="2013" data-plain>2013</b><span>год основания</span></div>
+      </article>
+      <article class="stat reveal" style="--d:2">
+        <img class="stat__ic" src="assets/chat.png" alt="" width="58" height="55">
+        <div><b class="stat__num" data-count="3000" data-suffix="+">3 000+</b><span>консультаций</span></div>
+      </article>
+      <article class="stat reveal" style="--d:3">
+        <img class="stat__ic" src="assets/person.png" alt="" width="58" height="55">
+        <div><b class="stat__num" data-count="6000" data-suffix="+">6 000+</b><span>получили помощь</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Пожертвование ============ -->
+<section class="donate" id="donate">
+  <div class="donate__bg" aria-hidden="true"><span class="blob blob--a"></span><span class="blob blob--b"></span></div>
+  <div class="container donate__inner">
+    <div class="donate__left">
+      <h2 class="h2 h2--white reveal">Сейчас нам особенно нужна поддержка</h2>
+      <p class="donate__sub reveal" style="--d:1">Убежище, еда и работа специалистов держатся на пожертвованиях</p>
+      <div class="donate__art reveal" style="--d:2" data-parallax="0.06">
+        <div class="morph"><img src="assets/woman.png" alt="Иллюстрация: женщина с коробкой продуктов и игрушек" width="614" height="548"></div>
+      </div>
+    </div>
+
+    <div class="donate__right reveal" style="--d:1">
+      <form class="widget" onsubmit="return false">
+        <div class="segmented" role="tablist" aria-label="Периодичность">
+          <span class="segmented__pill" aria-hidden="true"></span>
+          <button type="button" class="is-active" data-period="month">Ежемесячно</button>
+          <button type="button" data-period="once">Разово</button>
+        </div>
+
+        <p class="widget__label">Размер пожертвования</p>
+        <div class="amounts">
+          <span class="amounts__ring" aria-hidden="true"></span>
+          <button type="button" class="is-active" data-amount="300">300 ₽</button>
+          <button type="button" data-amount="500">500 ₽</button>
+          <button type="button" data-amount="1000">1 000 ₽</button>
+          <button type="button" data-amount="5000">5 000 ₽</button>
+        </div>
+        <label class="field field--sum"><input type="text" inputmode="numeric" placeholder="Другая сумма" data-custom><span>₽</span></label>
+
+        <p class="widget__label">Способ оплаты</p>
+        <div class="methods">
+          <button type="button" class="method is-active"><span class="method__logos"><img src="assets/pay-visa.png" alt="Visa" height="16"><img src="assets/pay-mc.png" alt="Mastercard" height="16"><img src="assets/pay-mir.png" alt="Мир" height="14"></span><small>Банковская карта (₽)</small></button>
+          <button type="button" class="method"><span class="method__logos"><img src="assets/pay-yoo.png" alt="ЮMoney" height="16"></span><small>ЮMoney (₽)</small></button>
+          <button type="button" class="method"><span class="method__logos"><img src="assets/pay-sber.png" alt="Сбер" height="18"></span><small>Сбер Онлайн (₽)</small></button>
+        </div>
+
+        <p class="widget__label">Ваши данные</p>
+        <label class="field"><input type="text" placeholder="Ваше имя" autocomplete="name"></label>
+        <label class="field"><input type="email" placeholder="Ваш email" autocomplete="email"></label>
+
+        <button type="submit" class="btn btn--dark btn--block btn--submit"><span>Поддержать —&nbsp;<span data-sum>300</span>&nbsp;₽<span data-period-label>&nbsp;в месяц</span></span></button>
+        <p class="widget__demo" role="status">Это прототип: пожертвования здесь не принимаются.</p>
+        <p class="widget__note">Нажимая на кнопку, вы принимаете <a href="#">условия оферты</a></p>
+      </form>
+
+      <div class="ways">
+        <a class="way way--accent" href="#business" id="business">
+          <span class="ic-circle ic-circle--soft"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 12.5h18M10.5 12.5v1.5h3v-1.5"/></svg></span>
+          Бизнесу и брендам
+          <svg class="way__arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+        <a class="way" href="#">
+          <span class="ic-circle ic-circle--soft"><svg viewBox="0 0 24 24"><path d="M12 13.6s-4.2-2.5-4.2-5.4A2.3 2.3 0 0 1 12 7a2.3 2.3 0 0 1 4.2 1.2c0 2.9-4.2 5.4-4.2 5.4zM2.5 16.5H6l3 1.8h5a1.4 1.4 0 0 0 0-2.8h-2.5M14.2 16.2l4.3-1.9a1.4 1.4 0 0 1 1.4 2.4L14 20.5H8.5l-6-.3"/></svg></span>
+          Стать волонтёром
+          <svg class="way__arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Партнёры и соцсети ============ -->
+<section class="section partners">
+  <div class="container partners__grid">
+    <div class="partners__main">
+      <article class="case reveal">
+        <img src="assets/cska.jpg" alt="Команда ПФК ЦСКА и сотрудницы центра с игровыми футболками" width="905" height="400" loading="lazy">
+        <div class="case__body">
+          <div>
+            <h3 class="case__title">Партнёрство с ПФК ЦСКА</h3>
+            <p>Болельщики поддержали убежище на матчах и в соцсетях клуба</p>
+          </div>
+          <a class="btn btn--white" href="#business">Стать партнёром</a>
+        </div>
+      </article>
+      <ul class="logos">
+        <li class="reveal" style="--d:0"><img src="assets/partner-cska.png" alt="ПФК ЦСКА" height="69"></li>
+        <li class="reveal" style="--d:1"><img src="assets/partner-sisters.png" alt="Центр «Сёстры»" height="86"></li>
+        <li class="reveal" style="--d:2"><img src="assets/partner-wcons.png" alt="Консорциум женских НКО" height="76"></li>
+        <li class="reveal logos__empty" style="--d:3">Партнёр</li>
+      </ul>
+    </div>
+
+    <aside class="socials reveal" style="--d:1">
+      <h3>Мы в соцсетях</h3>
+      <p>Новости, отчёты и истории</p>
+      <ul>
+        <li><a href="#"><span class="ic-circle ic-circle--white"><img src="assets/icons/tg.svg" alt="" width="24" height="24"></span>Telegram-канал</a></li>
+        <li><a href="#"><span class="ic-circle ic-circle--white"><img src="assets/icons/vk.svg" alt="" width="24" height="24"></span>VK</a></li>
+        <li><a href="#"><span class="ic-circle ic-circle--white"><img src="assets/icons/ig.svg" alt="" width="20" height="20"></span>Instagram*</a></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ Частые вопросы ============ -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <h2 class="h2 reveal">Частые вопросы</h2>
+    <div class="faq__list">
+      <details class="qa reveal" open>
+        <summary>Кому вы помогаете?<i></i></summary>
+        <div class="qa__a"><p>Женщинам и детям, пострадавшим от домашнего насилия или оказавшимся в трудной ситуации. Из любого региона и страны, любого вероисповедания, в том числе с ВИЧ — помогаем всем одинаково.</p></div>
+      </details>
+      <!-- Ответы ниже — черновик по фактам центра, сверить с клиентом -->
+      <details class="qa reveal">
+        <summary>Нужны ли документы или направление?<i></i></summary>
+        <div class="qa__a"><p>Нет. Помогаем без документов, регистрации и направления.</p></div>
+      </details>
+      <details class="qa reveal">
+        <summary>А если в убежище нет мест?<i></i></summary>
+        <div class="qa__a"><p>Всё равно напишите: поможем устроиться у партнёров.</p></div>
+      </details>
+      <details class="qa reveal">
+        <summary>Можно приехать с ребёнком или питомцем?<i></i></summary>
+        <div class="qa__a"><p>Да. В убежище можно с детьми и питомцами.</p></div>
+      </details>
+      <details class="qa reveal">
+        <summary>Где находится центр?<i></i></summary>
+        <div class="qa__a"><p>В Москве. Подробности сообщим после обращения в мессенджере.</p></div>
+      </details>
+      <details class="qa reveal">
+        <summary>Что будет после убежища?<i></i></summary>
+        <div class="qa__a"><p>Помогаем с поиском работы и жилья, чтобы начать новую жизнь.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Поддержать центр ============ -->
+<section class="container cta-wrap">
+  <div class="cta reveal">
+    <img class="cta__flower" src="assets/flower.png" alt="" aria-hidden="true" width="281" height="268">
+    <div>
+      <h2 class="cta__title">Поддержать центр</h2>
+      <p>Помощь женщинам и детям держится на пожертвованиях</p>
+    </div>
+    <a class="btn btn--dark btn--lg" href="#donate">Сделать пожертвование</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ Подвал ============ -->
+<footer class="footer" id="contacts">
+  <div class="footer__box">
+    <div class="footer__top">
+      <div class="footer-help reveal">
+        <h3>Нужна помощь — напишите</h3>
+        <p class="muted">Ответим в мессенджере. Мы не пишем первыми.</p>
+        <div class="footer-help__msgs">
+          <a class="fmsg" href="#"><img src="assets/icons/tg.svg" alt="" width="22" height="22">Telegram</a>
+          <a class="fmsg" href="https://wa.me/79169201030"><img src="assets/icons/wa.svg" alt="" width="22" height="22">WhatsApp</a>
+          <a class="fmsg" href="#"><img src="assets/icons/imo.svg" alt="" width="22" height="22">IMO</a>
+        </div>
+        <div class="footer-help__contacts">
+          <a class="contact" href="tel:+79169201030"><span class="ic-circle"><svg viewBox="0 0 24 24"><path d="M21.5 16.4v2.9a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6A2 2 0 0 1 3.8 2.5h2.9a2 2 0 0 1 2 1.7c.1.9.4 1.9.7 2.8a2 2 0 0 1-.5 2.1L7.7 10.3a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2.1z"/></svg></span><span><b>+7 916 920-10-30</b><small>Телефон доверия · 9:00–23:00</small></span></a>
+          <a class="contact" href="mailto:alsadikova@yandex.ru"><span class="ic-circle"><svg viewBox="0 0 24 24"><path d="M4.5 4.5h15a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-11a2 2 0 0 1 2-2zM3 7l7.9 5.3a2 2 0 0 0 2.2 0L21 7"/></svg></span><span><b>alsadikova@yandex.ru</b><small>Кризисная почта</small></span></a>
+        </div>
+      </div>
+      <nav class="footer__nav reveal" style="--d:1" aria-label="Подвал">
+        <div>
+          <h4>Разделы</h4>
+          <a href="#about">О центре</a><a href="#help">Получить помощь</a><a href="#business">Бизнесу и брендам</a><a href="#donate">Пожертвовать</a>
+        </div>
+        <div>
+          <h4>Документы</h4>
+          <a href="#">Отчётность</a><a href="#">Реквизиты</a><a href="#">Политика конфиденциальности</a>
+        </div>
+        <div>
+          <h4>Соцсети</h4>
+          <a class="fsoc" href="#"><span class="ic-circle ic-circle--sm"><img src="assets/icons/tg.svg" alt="" width="18" height="18"></span>Telegram-канал</a>
+          <a class="fsoc" href="#"><span class="ic-circle ic-circle--sm"><img src="assets/icons/vk.svg" alt="" width="18" height="18"></span>VK</a>
+          <a class="fsoc" href="#"><span class="ic-circle ic-circle--sm"><img src="assets/icons/ig.svg" alt="" width="16" height="16"></span>Instagram*</a>
+          <p class="footer__note">Новости центра. Не для обращений за помощью</p>
+        </div>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <img src="assets/logo.png" alt="Китеж" width="100" height="40">
+      <span>АНО «Кризисный центр «Китеж» · 2013–2026</span>
+      <span class="footer__age">18+</span>
+      <a class="footer__up" href="#top" aria-label="Наверх"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  document.querySelector('.widget').addEventListener('submit', e => { e.preventDefault(); document.querySelector('.widget__demo').classList.add('is-shown'); });
+</script>
+</body>
+</html>
